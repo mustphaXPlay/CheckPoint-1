@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html>
-<!--Everything-->
-
-<head>
-  <title>My Beautiful Page</title>
+<html lang="ar">
+  <head>
+    <title>My Beautiful Page</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-</head>
+    <meta charset="UTF-8" />
+    <!-- Font Awesome CSS (gives us the heart icon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <style>
+      /* Starting red heart */
+      .heart {
+        color: red;
+        font-size: 200px;
+        cursor: pointer;}
 
-<body>
+        
+        /* Starting green frog */
+        .frog {
+        color: rgb(0, 255, 68);
+        font-size: 250px;
+        cursor: pointer;}
+
+      /* Gray heart when not active */
+      .gray {
+        color: gray; }
+        /* Blue frog when not active */
+      .blue {
+        color: blue; }
+      
+    </style>
+  </head>
+  <body>
+    <!-- The heart icon -->
+    <i class="fas fa-heart heart" id="heartIcon"></i>
+    <i class="fas fa-frog frog" id="frogIcon"></i>
+
+    <!-- JavaScript to toggle color -->
+    <script>
+      const heart = document.getElementById("heartIcon"); 
+      const frog = document.getElementById("frogIcon");
+
+      heart.addEventListener("click", function () {
+        heart.classList.toggle("gray"); 
+      });
+        frog.addEventListener("click", function () {
+            frog.classList.toggle("blue"); 
+        });
+    </script>
+<!--Everything-->
   <header>
     <nav>
       <a href="#Home">Home</a>
@@ -62,7 +104,6 @@
     </p>
     <img src="Track.jpg" alt="Gomycode">
     <a href="#TopOfThePage"> Let's go up Top </a>
-</body>
 <audio controls>
   <source src="" type="audio/mpeg">
   Please Check the audio Extension
@@ -160,18 +201,6 @@
   <h1> What is the perks of being a Web Developer? <h1>
       <!-- Article contents -->
 </article>
-<html>
-
-<head>
-</head>
-
-<body>
-  <form>
-    A form
-  </form>
-</body>
-
-</html>
 <form>
   <label>Name:</label>
   <input type="text" name="first name" placeholder="Type your name here" />
@@ -218,11 +247,13 @@
   <footer>
     <!-- This button will submit the form, causing the page to redirect -->
     <button type="submit">Submit Name</button>
-  </footer>
+  </footer> 
+  </form>
+  </body>
+  </html>
+    
 
 
 
 
 
-
-</form>
